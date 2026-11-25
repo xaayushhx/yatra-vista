@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_APP_NAME,NEXT_PUBLIC_APP_URL,GEMINI_MODEL"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
