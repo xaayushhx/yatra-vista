@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-italiana: 'Italiana', serif;
+  --font-geist-sans: 'Plus Jakarta Sans', sans-serif;
+  --background: #011f26;
+  --foreground: #edf7f9;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: #011f26;
+  color: #edf7f9;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #011f26;
+  color: #edf7f9;
+  font-family: var(--font-geist-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Brand Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #011f26;
+}
+::-webkit-scrollbar-thumb {
+  background: #004d5d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff696b;
+}
+
+/* Typography styles */
+.font-display {
+  font-family: var(--font-cinzel);
+}
+
+.font-serif {
+  font-family: var(--font-playfair);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-italiana {
+  font-family: var(--font-italiana);
+}
+
+/* Brand Theme Gradients */
+.coral-foil-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ffa8aa 35%, #ff696b 65%, #fa5254 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.teal-foil-text {
+  background: linear-gradient(135deg, #ffffff 0%, #b5eaf4 35%, #22a2bb 70%, #004d5d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ffd0d1 30%, #ff696b 60%, #ffa8aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sand-foil-text {
+  background: linear-gradient(135deg, #ffffff 0%, #edf7f9 40%, #c0dfe6 70%, #74aebc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffffff 0%, #ffa8aa 30%, #ff696b 70%, #fa5254 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.editorial-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 105, 107, 0.3) 30%, rgba(255, 105, 107, 0.6) 50%, rgba(255, 105, 107, 0.3) 70%, transparent 100%);
+}
+
+.hairline-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hairline-coral {
+  border: 1px solid rgba(255, 105, 107, 0.3);
+}
+
+.editorial-badge {
+  letter-spacing: 0.25em;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(255, 105, 107, 0.12);
+  border: 1px solid rgba(255, 105, 107, 0.35);
+  color: #ff8284;
+}
+
+.coral-glow {
+  box-shadow: 0 0 35px rgba(255, 105, 107, 0.28);
+}
+
+.coral-glow-subtle {
+  box-shadow: 0 0 22px rgba(255, 105, 107, 0.16);
+}
+
+.teal-glow {
+  box-shadow: 0 0 35px rgba(0, 77, 93, 0.4);
+}
+
+/* Magnetic element transitions */
+.magnetic-wrap {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Modal custom scrollbar */
+.modal-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff696b rgba(0, 45, 55, 0.5);
+  -webkit-overflow-scrolling: touch;
+}
+.modal-scroll::-webkit-scrollbar {
+  width: 7px;
+}
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 32, 40, 0.6);
+  border-radius: 4px;
+}
+.modal-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 105, 107, 0.45);
+  border-radius: 4px;
+}
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #ff696b;
+}
+
+/* Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+/* Map pulse ripple */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+}

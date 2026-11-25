@@ -1,0 +1,185 @@
+import { ActivityItem } from "@/types";
+
+export interface CuratedActivityTemplate extends Omit<ActivityItem, "id"> {
+  category: "Heritage" | "Coastal" | "Gastronomy" | "Wellness" | "Luxury";
+  highlight?: boolean;
+}
+
+export const CURATED_GOA_ACTIVITIES: CuratedActivityTemplate[] = [
+  // Heritage & Culture
+  {
+    category: "Heritage",
+    title: "Fontainhas Azulejo & Colonial Architecture Walk",
+    description: "Private walking expedition through 18th-century cobblestone alleys, admiring hand-painted Portuguese Azulejos with a heritage architect.",
+    timeSlot: "morning",
+    duration: "2.5 hours",
+    estimatedCost: 1800,
+    tags: ["Heritage", "Architecture", "Art"],
+    highlight: true,
+  },
+  {
+    category: "Heritage",
+    title: "Acoustic Fado & Indo-Portuguese Villa Dinner",
+    description: "An intimate candlelit evening inside a 200-year-old family estate with live acoustic Portuguese Fado and vintage port wine.",
+    timeSlot: "evening",
+    duration: "3 hours",
+    estimatedCost: 3500,
+    tags: ["Heritage", "Music", "Dining"],
+    highlight: true,
+  },
+  {
+    category: "Heritage",
+    title: "Old Goa UNESCO Cathedrals & Crypt Explorer",
+    description: "Skip-the-line private curator tour of the Basilica of Bom Jesus, Se Cathedral, and the sacred crypt of St. Francis Xavier.",
+    timeSlot: "morning",
+    duration: "3 hours",
+    estimatedCost: 2000,
+    tags: ["Heritage", "History"],
+  },
+  {
+    category: "Heritage",
+    title: "Artisanal Cashew Feni Distillation Masterclass",
+    description: "Visit a heritage family distillery nestled in a Ponda cashew grove; sample pot-still feni paired with local tapas.",
+    timeSlot: "afternoon",
+    duration: "2.5 hours",
+    estimatedCost: 2400,
+    tags: ["Culture", "Tasting"],
+  },
+
+  // Coastal & Water Adventures
+  {
+    category: "Coastal",
+    title: "Private Sunset Catamaran to Butterfly & Cola Beach",
+    description: "Private luxury twin-hull catamaran charter along the secluded Cabo de Rama cliffs, dropping anchor for sunset champagne.",
+    timeSlot: "afternoon",
+    duration: "3.5 hours",
+    estimatedCost: 7500,
+    tags: ["Coastal", "Yacht", "Sunset"],
+    highlight: true,
+  },
+  {
+    category: "Coastal",
+    title: "Freshwater Lagoon Kayaking at Secluded Cola Beach",
+    description: "Glide in tandem kayaks along the natural freshwater emerald river where it meets the Arabian Sea sandbar.",
+    timeSlot: "morning",
+    duration: "2 hours",
+    estimatedCost: 1800,
+    tags: ["Adventure", "Kayaking", "Nature"],
+  },
+  {
+    category: "Coastal",
+    title: "Private Teak Outrigger Sunrise Dolphin Safari",
+    description: "Quiet early morning wooden boat sail out into deep coastal waters to observe leaping Indo-Pacific humpback dolphins.",
+    timeSlot: "morning",
+    duration: "2 hours",
+    estimatedCost: 2200,
+    tags: ["Wildlife", "Dolphins", "Coastal"],
+  },
+  {
+    category: "Coastal",
+    title: "Scuba Diving & Shipwreck Reef at Grande Island",
+    description: "PADI-guided deep dive exploration of volcanic pinnacles, sea turtles, and historic Portuguese coral-covered galleon relics.",
+    timeSlot: "morning",
+    duration: "4.5 hours",
+    estimatedCost: 4800,
+    tags: ["Diving", "Marine", "Adventure"],
+  },
+
+  // Gastronomy & Dining
+  {
+    category: "Gastronomy",
+    title: "Master Chef Crab Xec Xec & Lobster Culinary Atelier",
+    description: "Hands-on masterclass in a restored village kitchen learning authentic ground spice roasting, coconut extraction, and seafood prep.",
+    timeSlot: "afternoon",
+    duration: "3 hours",
+    estimatedCost: 3800,
+    tags: ["Gastronomy", "Cooking", "Seafood"],
+    highlight: true,
+  },
+  {
+    category: "Gastronomy",
+    title: "Candlelit Clifftop Private Seafood Barbecue",
+    description: "Private chef table set high above the Arabian Sea surf serving freshly caught butter-garlic tiger prawns and Kingfish.",
+    timeSlot: "evening",
+    duration: "3 hours",
+    estimatedCost: 4500,
+    tags: ["Dining", "Luxury", "Romantic"],
+  },
+  {
+    category: "Gastronomy",
+    title: "Artisanal Village Bakeries & Morning Poee Trail",
+    description: "Dawn bicycle trail across Goan village bakeries to taste wood-fired warm poee bread and Portuguese custard pastéis.",
+    timeSlot: "morning",
+    duration: "2 hours",
+    estimatedCost: 1200,
+    tags: ["Gastronomy", "Bakery", "Local"],
+  },
+  {
+    category: "Gastronomy",
+    title: "Mandovi Riverfront Sunset Tapas & Artisanal Cocktails",
+    description: "Reserved waterside table at Panaji's premier culinary lounge featuring regional botanicals, kokum spritzes, and prawn balchão.",
+    timeSlot: "evening",
+    duration: "2.5 hours",
+    estimatedCost: 2800,
+    tags: ["Dining", "Nightlife"],
+  },
+
+  // Wellness & Nature
+  {
+    category: "Wellness",
+    title: "Oceanfront Sunrise Yoga & Tibetan Sound Meditation",
+    description: "Rejuvenating sunrise vinyasa practice on secluded sands followed by restorative chakra sound bowls under swaying palms.",
+    timeSlot: "morning",
+    duration: "1.5 hours",
+    estimatedCost: 1500,
+    tags: ["Wellness", "Yoga", "Mindfulness"],
+    highlight: true,
+  },
+  {
+    category: "Wellness",
+    title: "Sahyadri Rainforest Spice Plantation & Organic Feast",
+    description: "Sensory walk through cardamom, vanilla, and pepper canopies, followed by an authentic banana-leaf Saraswat banquet.",
+    timeSlot: "afternoon",
+    duration: "4 hours",
+    estimatedCost: 2600,
+    tags: ["Nature", "Spice Grove", "Gastronomy"],
+  },
+  {
+    category: "Wellness",
+    title: "Private 4x4 Jeep Safari to Dudhsagar Waterfalls",
+    description: "Exhilarating off-road river-crossing trek through Bhagwan Mahavir Wildlife Sanctuary to the misty base of India's tallest cascades.",
+    timeSlot: "morning",
+    duration: "5 hours",
+    estimatedCost: 4200,
+    tags: ["Adventure", "Waterfalls", "Safari"],
+  },
+  {
+    category: "Wellness",
+    title: "Ayurvedic Beachfront Abhyanga & Warm Herbal Steam",
+    description: "Traditional herbal warm oil massage using medicinal herbs, followed by a coastal steam session and tender coconut water.",
+    timeSlot: "afternoon",
+    duration: "2 hours",
+    estimatedCost: 3200,
+    tags: ["Wellness", "Ayurveda", "Spa"],
+  },
+
+  // Luxury & Leisure
+  {
+    category: "Luxury",
+    title: "Vintage Open-Top Jeep Coastal Cliff Expedition",
+    description: "Chauffeured open-top vintage Willys jeep drive along the serpentine coastal roads of South Goa and secret clifftop lookouts.",
+    timeSlot: "afternoon",
+    duration: "3 hours",
+    estimatedCost: 3600,
+    tags: ["Luxury", "Scenic", "Vintage"],
+  },
+  {
+    category: "Luxury",
+    title: "Divar Island Private Solar River Ferry & High Tea",
+    description: "Private quiet electric solar boat cruise through mangrove backwaters to an aristocratic Portuguese riverside manor for tea.",
+    timeSlot: "afternoon",
+    duration: "3 hours",
+    estimatedCost: 3400,
+    tags: ["Luxury", "Backwaters", "Tea"],
+  },
+];
